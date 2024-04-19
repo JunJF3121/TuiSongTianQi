@@ -51,7 +51,7 @@ def get_weather(region):
     weather = '白天'+response['daily'][0]["textDay"]+'，'+'傍晚'+response['daily'][0]["textDay"]
     # 当前温度
     temp = response['daily'][0]["tempMin"]+ u"\N{DEGREE SIGN}" + "C"+'—'+response['daily'][0]["tempMax"]+ u"\N{DEGREE SIGN}" + "C"
-    if int(response['daily'][0]["tempMin"]) <= 20:
+    if int(response['daily'][0]["tempMin"]) <= 10:
         xigua = "天气变凉啦，多穿点衣服哦~"
     else:
         xigua = "今天又是很想你的一天~"
